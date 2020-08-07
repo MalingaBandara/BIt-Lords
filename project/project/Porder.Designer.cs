@@ -45,6 +45,8 @@
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -79,19 +81,21 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(23, 173);
+            this.label3.Location = new System.Drawing.Point(23, 170);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(72, 20);
             this.label3.TabIndex = 4;
             this.label3.Text = "Product :";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(106, 173);
+            this.textBox2.Location = new System.Drawing.Point(106, 170);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(222, 22);
             this.textBox2.TabIndex = 5;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label4
             // 
@@ -106,7 +110,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(106, 215);
+            this.textBox3.Location = new System.Drawing.Point(106, 213);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(222, 91);
@@ -117,7 +121,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(516, 138);
+            this.label5.Location = new System.Drawing.Point(392, 136);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(80, 20);
             this.label5.TabIndex = 8;
@@ -127,59 +131,64 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(516, 173);
+            this.label6.Location = new System.Drawing.Point(392, 168);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(80, 20);
             this.label6.TabIndex = 9;
             this.label6.Text = "Describe :";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(517, 248);
+            this.label7.Location = new System.Drawing.Point(401, 215);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(71, 20);
             this.label7.TabIndex = 10;
             this.label7.Text = "Quanity :";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(516, 286);
+            this.label8.Location = new System.Drawing.Point(397, 253);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(75, 20);
             this.label8.TabIndex = 11;
             this.label8.Text = "Suppiler :";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(627, 138);
+            this.textBox4.Location = new System.Drawing.Point(478, 136);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(222, 20);
             this.textBox4.TabIndex = 12;
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(627, 175);
+            this.textBox5.Location = new System.Drawing.Point(478, 168);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(222, 20);
             this.textBox5.TabIndex = 13;
+            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(627, 248);
+            this.textBox6.Location = new System.Drawing.Point(478, 217);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(222, 20);
             this.textBox6.TabIndex = 14;
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(627, 286);
+            this.textBox7.Location = new System.Drawing.Point(478, 255);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(222, 20);
             this.textBox7.TabIndex = 15;
+            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // button2
             // 
@@ -200,10 +209,19 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(27, 380);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(822, 190);
+            this.dataGridView1.TabIndex = 19;
+            // 
             // Porder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.textBox7);
@@ -221,9 +239,10 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Porder";
-            this.Size = new System.Drawing.Size(1077, 621);
+            this.Size = new System.Drawing.Size(954, 604);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -248,5 +267,6 @@
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

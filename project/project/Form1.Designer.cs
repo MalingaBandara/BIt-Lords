@@ -37,10 +37,10 @@
             this.home = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.panelContainer = new System.Windows.Forms.Panel();
+            this.searchproduct1 = new project.searchproduct();
             this.porder1 = new project.Porder();
             this.products1 = new project.Products();
             this.home1 = new project.Home();
-            this.searchproduct1 = new project.searchproduct();
             this.panelSideMenu.SuspendLayout();
             this.panelContainer.SuspendLayout();
             this.SuspendLayout();
@@ -58,7 +58,7 @@
             this.panelSideMenu.Location = new System.Drawing.Point(0, 0);
             this.panelSideMenu.Margin = new System.Windows.Forms.Padding(2);
             this.panelSideMenu.Name = "panelSideMenu";
-            this.panelSideMenu.Size = new System.Drawing.Size(188, 462);
+            this.panelSideMenu.Size = new System.Drawing.Size(188, 604);
             this.panelSideMenu.TabIndex = 0;
             // 
             // button5
@@ -169,8 +169,17 @@
             this.panelContainer.Location = new System.Drawing.Point(188, 0);
             this.panelContainer.Margin = new System.Windows.Forms.Padding(2);
             this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(895, 462);
+            this.panelContainer.Size = new System.Drawing.Size(954, 604);
             this.panelContainer.TabIndex = 1;
+            // 
+            // searchproduct1
+            // 
+            this.searchproduct1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.searchproduct1.Location = new System.Drawing.Point(0, 0);
+            this.searchproduct1.Name = "searchproduct1";
+            this.searchproduct1.Size = new System.Drawing.Size(954, 604);
+            this.searchproduct1.TabIndex = 3;
+            this.searchproduct1.Load += new System.EventHandler(this.searchproduct1_Load);
             // 
             // porder1
             // 
@@ -178,16 +187,16 @@
             this.porder1.Location = new System.Drawing.Point(0, 0);
             this.porder1.Margin = new System.Windows.Forms.Padding(2);
             this.porder1.Name = "porder1";
-            this.porder1.Size = new System.Drawing.Size(895, 462);
+            this.porder1.Size = new System.Drawing.Size(954, 604);
             this.porder1.TabIndex = 2;
             // 
             // products1
             // 
             this.products1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.products1.Location = new System.Drawing.Point(0, 0);
-            this.products1.Margin = new System.Windows.Forms.Padding(2);
+            this.products1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.products1.Name = "products1";
-            this.products1.Size = new System.Drawing.Size(895, 462);
+            this.products1.Size = new System.Drawing.Size(954, 604);
             this.products1.TabIndex = 1;
             this.products1.Load += new System.EventHandler(this.products1_Load);
             // 
@@ -197,23 +206,15 @@
             this.home1.Location = new System.Drawing.Point(0, 0);
             this.home1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.home1.Name = "home1";
-            this.home1.Size = new System.Drawing.Size(895, 462);
+            this.home1.Size = new System.Drawing.Size(954, 604);
             this.home1.TabIndex = 0;
-            // 
-            // searchproduct1
-            // 
-            this.searchproduct1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.searchproduct1.Location = new System.Drawing.Point(0, 0);
-            this.searchproduct1.Name = "searchproduct1";
-            this.searchproduct1.Size = new System.Drawing.Size(895, 462);
-            this.searchproduct1.TabIndex = 3;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(1083, 462);
+            this.ClientSize = new System.Drawing.Size(1142, 604);
             this.Controls.Add(this.panelContainer);
             this.Controls.Add(this.panelSideMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
