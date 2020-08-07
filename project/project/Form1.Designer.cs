@@ -37,8 +37,8 @@
             this.home = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.panelContainer = new System.Windows.Forms.Panel();
-            this.home1 = new project.Home();
             this.products1 = new project.Products();
+            this.home1 = new project.Home();
             this.panelSideMenu.SuspendLayout();
             this.panelContainer.SuspendLayout();
             this.SuspendLayout();
@@ -56,7 +56,7 @@
             this.panelSideMenu.Location = new System.Drawing.Point(0, 0);
             this.panelSideMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelSideMenu.Name = "panelSideMenu";
-            this.panelSideMenu.Size = new System.Drawing.Size(251, 572);
+            this.panelSideMenu.Size = new System.Drawing.Size(251, 569);
             this.panelSideMenu.TabIndex = 0;
             // 
             // button5
@@ -163,32 +163,32 @@
             this.panelContainer.Location = new System.Drawing.Point(251, 0);
             this.panelContainer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(593, 572);
+            this.panelContainer.Size = new System.Drawing.Size(908, 569);
             this.panelContainer.TabIndex = 1;
-            // 
-            // home1
-            // 
-            this.home1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.home1.Location = new System.Drawing.Point(0, 0);
-            this.home1.Name = "home1";
-            this.home1.Size = new System.Drawing.Size(593, 572);
-            this.home1.TabIndex = 0;
             // 
             // products1
             // 
             this.products1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.products1.Location = new System.Drawing.Point(0, 0);
             this.products1.Name = "products1";
-            this.products1.Size = new System.Drawing.Size(593, 572);
+            this.products1.Size = new System.Drawing.Size(908, 569);
             this.products1.TabIndex = 1;
             this.products1.Load += new System.EventHandler(this.products1_Load);
+            // 
+            // home1
+            // 
+            this.home1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.home1.Location = new System.Drawing.Point(0, 0);
+            this.home1.Name = "home1";
+            this.home1.Size = new System.Drawing.Size(908, 569);
+            this.home1.TabIndex = 0;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(844, 572);
+            this.ClientSize = new System.Drawing.Size(1159, 569);
             this.Controls.Add(this.panelContainer);
             this.Controls.Add(this.panelSideMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
