@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace project
 {
@@ -49,6 +50,33 @@ namespace project
 
         private void label6_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int id = int.Parse(txtPID.Text);
+            int bar = int.Parse(txtBCode.Text);
+            string Pname = txtPname.Text;
+            string descriptikon = txtDes.Text;
+            string category = txtcate.Text;
+            float OPrice = float.Parse(txtOP.Text);
+            float MPrice = float.Parse(txtMP.Text);
+
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\posDB.mdf;Integrated Security=True;Connect Timeout=30");
+            string qry = "Insert into  Product VALUES('"+id+"','"+bar+"','"+Pname+"','"+descriptikon+"','"+category+"','"+OPrice+"','"+MPrice+"')";
+            SqlCommand cmd = new SqlCommand(qry,con);
+
+            try
+            {
+                con.Open();
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Product is Register");
+            }
+            catch(SqlException ex)
+            {
+                MessageBox.Show("" + ex);
+            }
 
         }
     }
