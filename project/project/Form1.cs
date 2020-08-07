@@ -15,6 +15,8 @@ namespace project
         public Form1()
         {
             InitializeComponent();
+            Load += Form1_Load;
+
         }
 
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
@@ -29,7 +31,7 @@ namespace project
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            SetActivePanale(products1);
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -39,8 +41,26 @@ namespace project
 
         private void button1_Click(object sender, EventArgs e)
         {
+            SetActivePanale(home1);
+
+        }
+
+        public void SetActivePanale(UserControl control)
+        {
+            home1.Visible = false;
+            products1.Visible = false;
+
+            control.Visible = true; 
+        }
+
+        private void products1_Load(object sender, EventArgs e)
+        {
             
-          
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            SetActivePanale(home1);
         }
     }
 }
