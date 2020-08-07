@@ -36,7 +36,7 @@ namespace project
 
         private void button5_Click(object sender, EventArgs e)
         {
-
+            SetActivePanale(manageusers1);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -51,6 +51,9 @@ namespace project
             products1.Visible = false;
             porder1.Visible = false;
             searchproduct1.Visible = false;
+            manageusers1.Visible = false;
+
+
 
             control.Visible = true; 
         }
@@ -76,6 +79,11 @@ namespace project
         }
 
         private void searchproduct1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void manageusers1_Load(object sender, EventArgs e)
         {
 
         }

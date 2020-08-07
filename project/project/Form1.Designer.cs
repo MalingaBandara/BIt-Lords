@@ -37,6 +37,7 @@
             this.home = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.panelContainer = new System.Windows.Forms.Panel();
+            this.manageusers1 = new project.Manageusers();
             this.searchproduct1 = new project.searchproduct();
             this.porder1 = new project.Porder();
             this.products1 = new project.Products();
@@ -161,6 +162,7 @@
             // panelContainer
             // 
             this.panelContainer.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panelContainer.Controls.Add(this.manageusers1);
             this.panelContainer.Controls.Add(this.searchproduct1);
             this.panelContainer.Controls.Add(this.porder1);
             this.panelContainer.Controls.Add(this.products1);
@@ -171,6 +173,15 @@
             this.panelContainer.Name = "panelContainer";
             this.panelContainer.Size = new System.Drawing.Size(954, 604);
             this.panelContainer.TabIndex = 1;
+            // 
+            // manageusers1
+            // 
+            this.manageusers1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manageusers1.Location = new System.Drawing.Point(0, 0);
+            this.manageusers1.Name = "manageusers1";
+            this.manageusers1.Size = new System.Drawing.Size(954, 604);
+            this.manageusers1.TabIndex = 4;
+            this.manageusers1.Load += new System.EventHandler(this.manageusers1_Load);
             // 
             // searchproduct1
             // 
@@ -194,7 +205,7 @@
             // 
             this.products1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.products1.Location = new System.Drawing.Point(0, 0);
-            this.products1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.products1.Margin = new System.Windows.Forms.Padding(2);
             this.products1.Name = "products1";
             this.products1.Size = new System.Drawing.Size(954, 604);
             this.products1.TabIndex = 1;
@@ -242,6 +253,7 @@
         private Home home1;
         private Porder porder1;
         private searchproduct searchproduct1;
+        private Manageusers manageusers1;
     }
 }
 
