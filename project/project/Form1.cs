@@ -49,6 +49,7 @@ namespace project
         {
             home1.Visible = false;
             products1.Visible = false;
+            porder1.Visible = false;
 
             control.Visible = true; 
         }
@@ -61,6 +62,11 @@ namespace project
         private void Form1_Load(object sender, EventArgs e)
         {
             SetActivePanale(home1);
+        }
+
+        private void pOrder_Click(object sender, EventArgs e)
+        {
+            SetActivePanale(porder1);
         }
     }
 }

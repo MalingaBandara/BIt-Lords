@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panelSideMenu = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.pOrder = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.products = new System.Windows.Forms.Button();
             this.home = new System.Windows.Forms.Button();
@@ -39,6 +39,7 @@
             this.panelContainer = new System.Windows.Forms.Panel();
             this.products1 = new project.Products();
             this.home1 = new project.Home();
+            this.porder1 = new project.Porder();
             this.panelSideMenu.SuspendLayout();
             this.panelContainer.SuspendLayout();
             this.SuspendLayout();
@@ -47,7 +48,7 @@
             // 
             this.panelSideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(187)))), ((int)(((byte)(70)))));
             this.panelSideMenu.Controls.Add(this.button5);
-            this.panelSideMenu.Controls.Add(this.button4);
+            this.panelSideMenu.Controls.Add(this.pOrder);
             this.panelSideMenu.Controls.Add(this.button3);
             this.panelSideMenu.Controls.Add(this.products);
             this.panelSideMenu.Controls.Add(this.home);
@@ -76,21 +77,22 @@
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // button4
+            // pOrder
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(187)))), ((int)(((byte)(70)))));
-            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(0, 271);
-            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(251, 46);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Purchase Order";
-            this.button4.UseVisualStyleBackColor = false;
+            this.pOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(187)))), ((int)(((byte)(70)))));
+            this.pOrder.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pOrder.FlatAppearance.BorderSize = 0;
+            this.pOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.pOrder.Image = ((System.Drawing.Image)(resources.GetObject("pOrder.Image")));
+            this.pOrder.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.pOrder.Location = new System.Drawing.Point(0, 271);
+            this.pOrder.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pOrder.Name = "pOrder";
+            this.pOrder.Size = new System.Drawing.Size(251, 46);
+            this.pOrder.TabIndex = 4;
+            this.pOrder.Text = "Purchase Order";
+            this.pOrder.UseVisualStyleBackColor = false;
+            this.pOrder.Click += new System.EventHandler(this.pOrder_Click);
             // 
             // button3
             // 
@@ -157,6 +159,7 @@
             // panelContainer
             // 
             this.panelContainer.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panelContainer.Controls.Add(this.porder1);
             this.panelContainer.Controls.Add(this.products1);
             this.panelContainer.Controls.Add(this.home1);
             this.panelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -170,6 +173,7 @@
             // 
             this.products1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.products1.Location = new System.Drawing.Point(0, 0);
+            this.products1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.products1.Name = "products1";
             this.products1.Size = new System.Drawing.Size(908, 569);
             this.products1.TabIndex = 1;
@@ -182,6 +186,14 @@
             this.home1.Name = "home1";
             this.home1.Size = new System.Drawing.Size(908, 569);
             this.home1.TabIndex = 0;
+            // 
+            // porder1
+            // 
+            this.porder1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.porder1.Location = new System.Drawing.Point(0, 0);
+            this.porder1.Name = "porder1";
+            this.porder1.Size = new System.Drawing.Size(908, 569);
+            this.porder1.TabIndex = 2;
             // 
             // Form1
             // 
@@ -208,12 +220,13 @@
         private System.Windows.Forms.Button home;
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button pOrder;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button products;
         private System.Windows.Forms.Panel panelContainer;
         private Products products1;
         private Home home1;
+        private Porder porder1;
     }
 }
 
