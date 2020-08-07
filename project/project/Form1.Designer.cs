@@ -32,15 +32,12 @@
             this.panelSideMenu = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
             this.pOrder = new System.Windows.Forms.Button();
-            this.sproducts = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.products = new System.Windows.Forms.Button();
             this.home = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.panelContainer = new System.Windows.Forms.Panel();
-            this.searchproduct1 = new project.searchproduct();
-            this.porder1 = new project.Porder();
-            this.products1 = new project.Products();
-            this.home1 = new project.Home();
+            this.muser1 = new project.Muser();
             this.panelSideMenu.SuspendLayout();
             this.panelContainer.SuspendLayout();
             this.SuspendLayout();
@@ -50,7 +47,7 @@
             this.panelSideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(187)))), ((int)(((byte)(70)))));
             this.panelSideMenu.Controls.Add(this.button5);
             this.panelSideMenu.Controls.Add(this.pOrder);
-            this.panelSideMenu.Controls.Add(this.sproducts);
+            this.panelSideMenu.Controls.Add(this.button3);
             this.panelSideMenu.Controls.Add(this.products);
             this.panelSideMenu.Controls.Add(this.home);
             this.panelSideMenu.Controls.Add(this.panelLogo);
@@ -58,7 +55,7 @@
             this.panelSideMenu.Location = new System.Drawing.Point(0, 0);
             this.panelSideMenu.Margin = new System.Windows.Forms.Padding(2);
             this.panelSideMenu.Name = "panelSideMenu";
-            this.panelSideMenu.Size = new System.Drawing.Size(188, 604);
+            this.panelSideMenu.Size = new System.Drawing.Size(188, 462);
             this.panelSideMenu.TabIndex = 0;
             // 
             // button5
@@ -95,22 +92,21 @@
             this.pOrder.UseVisualStyleBackColor = false;
             this.pOrder.Click += new System.EventHandler(this.pOrder_Click);
             // 
-            // sproducts
+            // button3
             // 
-            this.sproducts.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(187)))), ((int)(((byte)(70)))));
-            this.sproducts.Dock = System.Windows.Forms.DockStyle.Top;
-            this.sproducts.FlatAppearance.BorderSize = 0;
-            this.sproducts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.sproducts.Image = ((System.Drawing.Image)(resources.GetObject("sproducts.Image")));
-            this.sproducts.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.sproducts.Location = new System.Drawing.Point(0, 182);
-            this.sproducts.Margin = new System.Windows.Forms.Padding(2);
-            this.sproducts.Name = "sproducts";
-            this.sproducts.Size = new System.Drawing.Size(188, 37);
-            this.sproducts.TabIndex = 3;
-            this.sproducts.Text = "Search Products";
-            this.sproducts.UseVisualStyleBackColor = false;
-            this.sproducts.Click += new System.EventHandler(this.sproducts_Click);
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(187)))), ((int)(((byte)(70)))));
+            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(0, 182);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(188, 37);
+            this.button3.TabIndex = 3;
+            this.button3.Text = "Search Products";
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // products
             // 
@@ -161,60 +157,28 @@
             // panelContainer
             // 
             this.panelContainer.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panelContainer.Controls.Add(this.searchproduct1);
-            this.panelContainer.Controls.Add(this.porder1);
-            this.panelContainer.Controls.Add(this.products1);
-            this.panelContainer.Controls.Add(this.home1);
+            this.panelContainer.Controls.Add(this.muser1);
             this.panelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContainer.Location = new System.Drawing.Point(188, 0);
             this.panelContainer.Margin = new System.Windows.Forms.Padding(2);
             this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(954, 604);
+            this.panelContainer.Size = new System.Drawing.Size(681, 462);
             this.panelContainer.TabIndex = 1;
             // 
-            // searchproduct1
+            // muser1
             // 
-            this.searchproduct1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.searchproduct1.Location = new System.Drawing.Point(0, 0);
-            this.searchproduct1.Name = "searchproduct1";
-            this.searchproduct1.Size = new System.Drawing.Size(954, 604);
-            this.searchproduct1.TabIndex = 3;
-            this.searchproduct1.Load += new System.EventHandler(this.searchproduct1_Load);
-            // 
-            // porder1
-            // 
-            this.porder1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.porder1.Location = new System.Drawing.Point(0, 0);
-            this.porder1.Margin = new System.Windows.Forms.Padding(2);
-            this.porder1.Name = "porder1";
-            this.porder1.Size = new System.Drawing.Size(954, 604);
-            this.porder1.TabIndex = 2;
-            // 
-            // products1
-            // 
-            this.products1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.products1.Location = new System.Drawing.Point(0, 0);
-            this.products1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.products1.Name = "products1";
-            this.products1.Size = new System.Drawing.Size(954, 604);
-            this.products1.TabIndex = 1;
-            this.products1.Load += new System.EventHandler(this.products1_Load);
-            // 
-            // home1
-            // 
-            this.home1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.home1.Location = new System.Drawing.Point(0, 0);
-            this.home1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.home1.Name = "home1";
-            this.home1.Size = new System.Drawing.Size(954, 604);
-            this.home1.TabIndex = 0;
+            this.muser1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.muser1.Location = new System.Drawing.Point(0, 0);
+            this.muser1.Name = "muser1";
+            this.muser1.Size = new System.Drawing.Size(681, 462);
+            this.muser1.TabIndex = 0;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(1142, 604);
+            this.ClientSize = new System.Drawing.Size(869, 462);
             this.Controls.Add(this.panelContainer);
             this.Controls.Add(this.panelSideMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -235,13 +199,13 @@
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button pOrder;
-        private System.Windows.Forms.Button sproducts;
+        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button products;
         private System.Windows.Forms.Panel panelContainer;
         private Products products1;
         private Home home1;
         private Porder porder1;
-        private searchproduct searchproduct1;
+        private Muser muser1;
     }
 }
 
