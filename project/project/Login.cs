@@ -16,5 +16,12 @@ namespace project
         {
             InitializeComponent();
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            Form1 fm = new Form1();
+            this.Hide();
+            fm.Show();
+        }
     }
 }
