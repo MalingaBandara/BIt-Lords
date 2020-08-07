@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace project
 {
-    public partial class Muser : UserControl
+    public partial class searchproduct : UserControl
     {
-        public Muser()
+        public searchproduct()
         {
             InitializeComponent();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

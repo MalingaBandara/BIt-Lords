@@ -36,7 +36,7 @@ namespace project
 
         private void button5_Click(object sender, EventArgs e)
         {
-            SetActivePanale(muser1);
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -50,9 +50,9 @@ namespace project
             home1.Visible = false;
             products1.Visible = false;
             porder1.Visible = false;
-            muser1.Visible = false;
-            control.Visible = true;
-            
+            searchproduct1.Visible = false;
+
+            control.Visible = true; 
         }
 
         private void products1_Load(object sender, EventArgs e)
@@ -68,6 +68,16 @@ namespace project
         private void pOrder_Click(object sender, EventArgs e)
         {
             SetActivePanale(porder1);
+        }
+
+        private void sproducts_Click(object sender, EventArgs e)
+        {
+            SetActivePanale(searchproduct1);
+        }
+
+        private void searchproduct1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
