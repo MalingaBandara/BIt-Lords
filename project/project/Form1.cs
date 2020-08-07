@@ -36,7 +36,7 @@ namespace project
 
         private void button5_Click(object sender, EventArgs e)
         {
-            SetActivePanale(manage_User1);
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -50,7 +50,6 @@ namespace project
             home1.Visible = false;
             products1.Visible = false;
             porder1.Visible = false;
-            manage_User1.Visible = false;
 
             control.Visible = true; 
         }

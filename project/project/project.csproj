@@ -64,12 +64,6 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Manage_User.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Manage_User.Designer.cs">
-      <DependentUpon>Manage_User.cs</DependentUpon>
-    </Compile>
     <Compile Include="Porder.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -92,9 +86,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Manage_User.resx">
-      <DependentUpon>Manage_User.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Porder.resx">
       <DependentUpon>Porder.cs</DependentUpon>
