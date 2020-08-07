@@ -70,7 +70,7 @@
             this.label1.Location = new System.Drawing.Point(423, 127);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(208, 18);
-            this.label1.TabIndex = 5;
+            this.label1.TabIndex = 0;
             this.label1.Text = "Get Started From Login Below";
             // 
             // txtUname
@@ -80,9 +80,11 @@
             this.txtUname.Location = new System.Drawing.Point(426, 179);
             this.txtUname.Name = "txtUname";
             this.txtUname.Size = new System.Drawing.Size(205, 31);
-            this.txtUname.TabIndex = 6;
+            this.txtUname.TabIndex = 2;
             this.txtUname.Text = "User Name";
             this.txtUname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtUname.Enter += new System.EventHandler(this.txtUname_Enter);
+            this.txtUname.Leave += new System.EventHandler(this.txtUname_Leave);
             // 
             // txtPword
             // 
@@ -91,9 +93,11 @@
             this.txtPword.Location = new System.Drawing.Point(426, 233);
             this.txtPword.Name = "txtPword";
             this.txtPword.Size = new System.Drawing.Size(205, 31);
-            this.txtPword.TabIndex = 7;
+            this.txtPword.TabIndex = 3;
             this.txtPword.Text = "Password";
             this.txtPword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtPword.Enter += new System.EventHandler(this.txtPword_Enter);
+            this.txtPword.Leave += new System.EventHandler(this.txtPword_Leave);
             // 
             // pictureBox3
             // 
@@ -113,7 +117,7 @@
             this.label2.Location = new System.Drawing.Point(423, 406);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(92, 13);
-            this.label2.TabIndex = 9;
+            this.label2.TabIndex = 1;
             this.label2.Text = "Forgot Password?";
             // 
             // linkLabel1
@@ -123,7 +127,7 @@
             this.linkLabel1.Location = new System.Drawing.Point(515, 406);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(56, 13);
-            this.linkLabel1.TabIndex = 10;
+            this.linkLabel1.TabIndex = 0;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Click Here";
             // 
