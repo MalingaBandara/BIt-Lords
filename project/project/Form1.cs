@@ -40,8 +40,7 @@ namespace project
         private void button1_Click(object sender, EventArgs e)
         {
             
-            Home h = new Home();
-            h.ShowDialog();
+          
         }
     }
 }
