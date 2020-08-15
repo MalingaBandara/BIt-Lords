@@ -64,7 +64,7 @@ namespace project
             float MPrice = float.Parse(txtMP.Text);
 
             SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\posDB.mdf;Integrated Security=True;Connect Timeout=30");
-            string qry = "INSERT INTO Product VALUES(' "+id+","+bar+","+Pname+","+descriptikon+","+category+","+OPrice+","+MPrice+"')";
+            string qry = "INSERT INTO Product VALUES('"+id+"','"+bar+"','"+Pname+"','"+descriptikon+"','"+category+"','"+OPrice+"','"+MPrice+"')";
             SqlCommand cmd = new SqlCommand(qry,con);
 
             try
@@ -77,6 +77,11 @@ namespace project
             {
                 MessageBox.Show("" + ex);
             }
+
+        }
+
+        private void txtPname_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }
