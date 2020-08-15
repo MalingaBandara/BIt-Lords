@@ -38,7 +38,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.txtPID = new System.Windows.Forms.TextBox();
             this.txtBCode = new System.Windows.Forms.TextBox();
-            this.txtPname = new System.Windows.Forms.TextBox();
             this.txtDes = new System.Windows.Forms.TextBox();
             this.txtcate = new System.Windows.Forms.TextBox();
             this.txtOP = new System.Windows.Forms.TextBox();
@@ -46,6 +45,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.txtPname = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -136,7 +136,7 @@
             // txtPID
             // 
             this.txtPID.Location = new System.Drawing.Point(130, 86);
-            this.txtPID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPID.Margin = new System.Windows.Forms.Padding(2);
             this.txtPID.Name = "txtPID";
             this.txtPID.Size = new System.Drawing.Size(199, 20);
             this.txtPID.TabIndex = 2;
@@ -144,23 +144,15 @@
             // txtBCode
             // 
             this.txtBCode.Location = new System.Drawing.Point(130, 123);
-            this.txtBCode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBCode.Margin = new System.Windows.Forms.Padding(2);
             this.txtBCode.Name = "txtBCode";
             this.txtBCode.Size = new System.Drawing.Size(199, 20);
             this.txtBCode.TabIndex = 2;
             // 
-            // txtPname
-            // 
-            this.txtPname.Location = new System.Drawing.Point(130, 160);
-            this.txtPname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtPname.Name = "txtPname";
-            this.txtPname.Size = new System.Drawing.Size(199, 20);
-            this.txtPname.TabIndex = 2;
-            // 
             // txtDes
             // 
             this.txtDes.Location = new System.Drawing.Point(130, 200);
-            this.txtDes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDes.Margin = new System.Windows.Forms.Padding(2);
             this.txtDes.Multiline = true;
             this.txtDes.Name = "txtDes";
             this.txtDes.Size = new System.Drawing.Size(199, 66);
@@ -170,7 +162,7 @@
             // txtcate
             // 
             this.txtcate.Location = new System.Drawing.Point(461, 86);
-            this.txtcate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtcate.Margin = new System.Windows.Forms.Padding(2);
             this.txtcate.Name = "txtcate";
             this.txtcate.Size = new System.Drawing.Size(199, 20);
             this.txtcate.TabIndex = 3;
@@ -178,7 +170,7 @@
             // txtOP
             // 
             this.txtOP.Location = new System.Drawing.Point(461, 125);
-            this.txtOP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtOP.Margin = new System.Windows.Forms.Padding(2);
             this.txtOP.Name = "txtOP";
             this.txtOP.Size = new System.Drawing.Size(199, 20);
             this.txtOP.TabIndex = 3;
@@ -186,7 +178,7 @@
             // txtMP
             // 
             this.txtMP.Location = new System.Drawing.Point(461, 162);
-            this.txtMP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMP.Margin = new System.Windows.Forms.Padding(2);
             this.txtMP.Name = "txtMP";
             this.txtMP.Size = new System.Drawing.Size(199, 20);
             this.txtMP.TabIndex = 3;
@@ -195,7 +187,7 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(73, 332);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -222,10 +214,24 @@
             this.button2.Text = "New";
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // txtPname
+            // 
+            this.txtPname.FormattingEnabled = true;
+            this.txtPname.Items.AddRange(new object[] {
+            "item1",
+            "item2",
+            "item3",
+            "malinga n chamath"});
+            this.txtPname.Location = new System.Drawing.Point(139, 157);
+            this.txtPname.Name = "txtPname";
+            this.txtPname.Size = new System.Drawing.Size(121, 21);
+            this.txtPname.TabIndex = 8;
+            // 
             // Products
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.txtPname);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
@@ -233,7 +239,6 @@
             this.Controls.Add(this.txtOP);
             this.Controls.Add(this.txtcate);
             this.Controls.Add(this.txtDes);
-            this.Controls.Add(this.txtPname);
             this.Controls.Add(this.txtBCode);
             this.Controls.Add(this.txtPID);
             this.Controls.Add(this.label8);
@@ -244,7 +249,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Products";
             this.Size = new System.Drawing.Size(954, 604);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -265,7 +270,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtPID;
         private System.Windows.Forms.TextBox txtBCode;
-        private System.Windows.Forms.TextBox txtPname;
         private System.Windows.Forms.TextBox txtDes;
         private System.Windows.Forms.TextBox txtcate;
         private System.Windows.Forms.TextBox txtOP;
@@ -273,5 +277,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ComboBox txtPname;
     }
 }
