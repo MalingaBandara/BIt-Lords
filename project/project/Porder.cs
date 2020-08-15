@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace project
 {
@@ -74,14 +75,34 @@ namespace project
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if(textBox1.Text=="" && textBox2.Text == "" && textBox3.Text == "" && textBox4.Text == "" && textBox5.Text == "" && textBox6.Text == "" && textBox7.Text == "")
+            if(textBox1.Text=="" && textBox2.Text == "" && textBox3.Text == "" && textBox4.Text == "" && textBox6.Text == "" && textBox7.Text == "")
             {
                 MessageBox.Show("enter required feild");
             }
 
             else
             {
-                MessageBox.Show("Text box is not null");
+                int barcode = int.Parse(textBox1.Text);
+                string product = textBox2.Text;
+                string description = textBox3.Text;
+                int price = int.Parse(textBox4.Text);
+                int quantity = int.Parse(textBox6.Text);
+                string suppiler = textBox7.Text;
+
+                SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\orderproducts.mdf;Integrated Security=True;Connect Timeout=30");
+                string qry = "INSERT INTO orderp VALUES('" + product + "','" + barcode + "','" + price + "','" + description  + "','" + quantity + "','" + suppiler + "')";
+                SqlCommand cmd = new SqlCommand(qry,con);
+
+                try
+                {
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Data inserted Successfully");
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("" + ex);
+                }
             }
         }
         }
