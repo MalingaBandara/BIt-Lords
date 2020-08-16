@@ -102,9 +102,9 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(426, 270);
+            this.pictureBox3.Location = new System.Drawing.Point(449, 276);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(205, 125);
+            this.pictureBox3.Size = new System.Drawing.Size(146, 127);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 8;
             this.pictureBox3.TabStop = false;
@@ -130,15 +130,16 @@
             this.linkLabel1.TabIndex = 0;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Click Here";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(672, 428);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.txtPword);
             this.Controls.Add(this.txtUname);
             this.Controls.Add(this.label1);
