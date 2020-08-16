@@ -105,6 +105,19 @@ namespace project
                 }
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string conString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\orderproducts.mdf;Integrated Security=True;Connect Timeout=30";
+            string qry = "Select * From orderp";
+
+            SqlDataAdapter da = new SqlDataAdapter(qry, conString);
+            DataSet ds = new DataSet();
+
+            da.Fill(ds, "orderp");
+            DD.DataSource = ds.Tables["orderp"];
         }
+
+    }
     }
 
