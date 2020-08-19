@@ -75,7 +75,7 @@ namespace project
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if(textBox1.Text=="" && textBox2.Text == "" && textBox3.Text == "" && textBox4.Text == "" && textBox6.Text == "" && textBox7.Text == "")
+            if(textBox1.Text=="" || textBox2.Text == "" || textBox3.Text == "" || textBox4.Text == "" || textBox6.Text == "" || textBox7.Text == "")
             {
                 MessageBox.Show("enter required feild");
             }
