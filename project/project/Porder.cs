@@ -35,12 +35,8 @@ namespace project
 
         private void button3_Click(object sender, EventArgs e)
         {
-            textBox1.Text=null;
-            textBox2.Text=null;
-             textBox3.Text=null;
-            textBox4.Text=null;
-            textBox6.Text = null;
-           textBox7.Text=null;
+            sum = 0;
+            lblcal.Text = null;
 
 
         }
@@ -79,7 +75,7 @@ namespace project
         {
 
         }
-
+        double sum = 0;
         private void button2_Click(object sender, EventArgs e)
         {
             
@@ -114,7 +110,7 @@ namespace project
                     MessageBox.Show("" + ex);
                 }
             }
-            double sum=0;
+           
             sum +=  price*quantity;
 
             lblcal.Text = sum.ToString();

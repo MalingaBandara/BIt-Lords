@@ -46,6 +46,7 @@
             this.DD = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.lblcal = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DD)).BeginInit();
             this.SuspendLayout();
             // 
@@ -230,12 +231,24 @@
             // 
             // lblcal
             // 
-            this.lblcal.Location = new System.Drawing.Point(685, 490);
+            this.lblcal.Location = new System.Drawing.Point(762, 527);
             this.lblcal.Name = "lblcal";
-            this.lblcal.Size = new System.Drawing.Size(283, 183);
+            this.lblcal.Size = new System.Drawing.Size(201, 90);
             this.lblcal.TabIndex = 22;
             this.lblcal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblcal.Click += new System.EventHandler(this.label9_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(634, 557);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(67, 25);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "Total :";
+            this.label6.Click += new System.EventHandler(this.label2_Click);
             // 
             // Porder
             // 
@@ -257,6 +270,7 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -289,5 +303,6 @@
         private System.Windows.Forms.DataGridView DD;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lblcal;
+        private System.Windows.Forms.Label label6;
     }
 }
