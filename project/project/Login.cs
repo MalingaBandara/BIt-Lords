@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -19,9 +21,29 @@ namespace project
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            Form1 fm = new Form1();
-            this.Hide();
-            fm.Show();
+            string uname = txtUname.Text;
+            string pass = txtPword.Text;
+
+            if (uname == "user" || pass == "1234")
+            {
+                Form1 fm = new Form1();
+                this.Hide();
+                fm.Show();
+            }
+            else if(uname == "user1" || pass == "12345")
+            {
+                Form1 fm = new Form1();
+                this.Hide();
+                fm.Show();
+            }
+            else
+            {
+                MessageBox.Show("Password or UserName Not match");
+            }
+
+
+
+
         }
 
         

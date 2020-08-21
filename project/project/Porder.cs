@@ -35,6 +35,13 @@ namespace project
 
         private void button3_Click(object sender, EventArgs e)
         {
+            textBox1.Text=null;
+            textBox2.Text=null;
+             textBox3.Text=null;
+            textBox4.Text=null;
+            textBox6.Text = null;
+           textBox7.Text=null;
+
 
         }
 
@@ -75,19 +82,22 @@ namespace project
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if(textBox1.Text=="" || textBox2.Text == "" || textBox3.Text == "" || textBox4.Text == "" || textBox6.Text == "" || textBox7.Text == "")
+            
+            int barcode = int.Parse(textBox1.Text);
+            string product = textBox2.Text;
+            string description = textBox3.Text;
+            double price = double.Parse(textBox4.Text);
+             double quantity = double.Parse(textBox6.Text);
+            string suppiler = textBox7.Text;
+
+            if (textBox1.Text=="" || textBox2.Text == "" || textBox3.Text == "" || textBox4.Text == "" || textBox6.Text == "" || textBox7.Text == "")
             {
                 MessageBox.Show("enter required feild");
             }
 
             else
             {
-                int barcode = int.Parse(textBox1.Text);
-                string product = textBox2.Text;
-                string description = textBox3.Text;
-                int price = int.Parse(textBox4.Text);
-                int quantity = int.Parse(textBox6.Text);
-                string suppiler = textBox7.Text;
+                
 
                 SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\orderproducts.mdf;Integrated Security=True;Connect Timeout=30");
                 string qry = "INSERT INTO orderp VALUES('" + product + "','" + barcode + "','" + price + "','" + description  + "','" + quantity + "','" + suppiler + "')";
@@ -97,14 +107,33 @@ namespace project
                 {
                     con.Open();
                     cmd.ExecuteNonQuery();
-                    MessageBox.Show("Data inserted Successfully");
+                    
                 }
                 catch(Exception ex)
                 {
                     MessageBox.Show("" + ex);
                 }
             }
+            double sum=0;
+            sum +=  price*quantity;
+
+            lblcal.Text = sum.ToString();
+
+            textBox1.Text = null;
+            textBox2.Text = null;
+            textBox3.Text = null;
+            textBox4.Text = null;
+            textBox6.Text = null;
+            textBox7.Text = null;
         }
+        
+       
+
+
+        
+          
+       
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -118,6 +147,20 @@ namespace project
             DD.DataSource = ds.Tables["orderp"];
         }
 
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Porder_Load(object sender, EventArgs e)
+        {
+
+        }
     }
     }
 
