@@ -89,7 +89,7 @@ namespace project
                 int quantity = int.Parse(textBox6.Text);
                 string suppiler = textBox7.Text;
 
-                SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\orderproducts.mdf;Integrated Security=True;Connect Timeout=30");
+                SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\orderproducts.mdf;Integrated Security=True;Connect Timeout=30");
                 string qry = "INSERT INTO orderp VALUES('" + product + "','" + barcode + "','" + price + "','" + description  + "','" + quantity + "','" + suppiler + "')";
                 SqlCommand cmd = new SqlCommand(qry,con);
 
@@ -108,7 +108,7 @@ namespace project
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string conString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\orderproducts.mdf;Integrated Security=True;Connect Timeout=30";
+            string conString = (@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\orderproducts.mdf;Integrated Security=True;Connect Timeout=30");
             string qry = "Select * From orderp";
 
             SqlDataAdapter da = new SqlDataAdapter(qry, conString);
