@@ -55,29 +55,38 @@ namespace project
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int id = int.Parse(txtid.Text);
-            int bar = int.Parse(txtBCode.Text);
-            string Pname = txtPname.Text;
-            string descriptikon = txtDes.Text;
-            string category = txtcate.Text;
-            float OPrice = float.Parse(txtOP.Text);
-            float MPrice = float.Parse(txtMP.Text);
 
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\posDB.mdf;Integrated Security=True;Connect Timeout=30");
-            string qry = "INSERT INTO Product(ProductId,Barcode,ProductName,Description,Category,OriginalPrice,MarkupPrice) VALUES('"+id+"','"+bar+"','"+Pname+"','"+descriptikon+"','"+category+"','"+OPrice+"','"+MPrice+"')";
-            SqlCommand cmd = new SqlCommand(qry,con);
+            
 
-            try
+            if (txtid.Text == "" || txtBCode.Text == "" || txtDes.Text == "" || txtPname.Text == "" || txtcate.Text == "" || txtOP.Text == "" || txtMP.Text == "")
             {
-                con.Open();
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Product is Register");
+                MessageBox.Show("enter required feild");
             }
-            catch(SqlException ex)
+            else
             {
-                MessageBox.Show("" + ex);
-            }
+                int id = int.Parse(txtid.Text);
+                int bar = int.Parse(txtBCode.Text);
+                string Pname = txtPname.Text;
+                string descriptikon = txtDes.Text;
+                string category = txtcate.Text;
+                float OPrice = float.Parse(txtOP.Text);
+                float MPrice = float.Parse(txtMP.Text);
 
+                SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\posDB.mdf;Integrated Security=True;Connect Timeout=30");
+                string qry = "INSERT INTO Product(ProductId,Barcode,ProductName,Description,Category,OriginalPrice,MarkupPrice) VALUES('" + id + "','" + bar + "','" + Pname + "','" + descriptikon + "','" + category + "','" + OPrice + "','" + MPrice + "')";
+                SqlCommand cmd = new SqlCommand(qry, con);
+
+                try
+                {
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Product is Register");
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show("" + ex);
+                }
+            }
         }
 
         private void txtPname_SelectedIndexChnged(object sender, EventArgs e)
@@ -103,6 +112,13 @@ namespace project
 
         private void button4_Click(object sender, EventArgs e)
         {
+            txtid.Text = null;
+            txtBCode.Text = null;
+            txtPname.Text = null;
+            txtDes.Text = null;
+            txtcate.Text= null;
+            txtOP.Text = null;
+            txtMP.Text = null;
 
         }
     }

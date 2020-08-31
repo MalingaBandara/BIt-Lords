@@ -30,21 +30,27 @@ namespace project
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-
-            string prname = pname.Text;
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\posDB.mdf;Integrated Security=True;Connect Timeout=30");
-            string qry = "DELETE from Product Where ProductName='"+prname+"' ";
-            SqlCommand cmd = new SqlCommand(qry, con);
-
-            try
+            if (pname.Text == "")
             {
-                con.Open();
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Product is Delete");
+                MessageBox.Show("Please enter the required fields !");
             }
-            catch (SqlException ex)
+            else
             {
-                MessageBox.Show("" + ex);
+                string prname = pname.Text;
+                SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\posDB.mdf;Integrated Security=True;Connect Timeout=30");
+                string qry = "DELETE from Product Where ProductName='" + prname + "' ";
+                SqlCommand cmd = new SqlCommand(qry, con);
+
+                try
+                {
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Product is Delete");
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show("" + ex);
+                }
             }
 
         }

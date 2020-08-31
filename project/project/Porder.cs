@@ -79,12 +79,7 @@ namespace project
         private void button2_Click(object sender, EventArgs e)
         {
             
-            int barcode = int.Parse(textBox1.Text);
-            string product = textBox2.Text;
-            string description = textBox3.Text;
-            double price = double.Parse(textBox4.Text);
-             double quantity = double.Parse(textBox6.Text);
-            string suppiler = textBox7.Text;
+            
 
             if (textBox1.Text=="" || textBox2.Text == "" || textBox3.Text == "" || textBox4.Text == "" || textBox6.Text == "" || textBox7.Text == "")
             {
@@ -93,12 +88,21 @@ namespace project
 
             else
             {
-                
+
+                int barcode = int.Parse(textBox1.Text);
+                string product = textBox2.Text;
+                string description = textBox3.Text;
+                double price = double.Parse(textBox4.Text);
+                double quantity = double.Parse(textBox6.Text);
+                string suppiler = textBox7.Text;
 
                 SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\orderproducts.mdf;Integrated Security=True;Connect Timeout=30");
                 string qry = "INSERT INTO orderp VALUES('" + product + "','" + barcode + "','" + price + "','" + description  + "','" + quantity + "','" + suppiler + "')";
                 SqlCommand cmd = new SqlCommand(qry,con);
 
+                sum += price * quantity;
+
+                lblcal.Text = sum.ToString();
                 try
                 {
                     con.Open();
@@ -111,9 +115,6 @@ namespace project
                 }
             }
            
-            sum +=  price*quantity;
-
-            lblcal.Text = sum.ToString();
 
             textBox1.Text = null;
             textBox2.Text = null;

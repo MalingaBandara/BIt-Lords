@@ -24,13 +24,13 @@ namespace project
             string uname = txtUname.Text;
             string pass = txtPword.Text;
 
-            if (uname == "user" || pass == "1234")
+            if (uname == "user" && pass =="1234")
             {
                 Form1 fm = new Form1();
                 this.Hide();
                 fm.Show();
             }
-            else if(uname == "user1" || pass == "12345")
+            else if(uname == "user1" &&    pass == "12345")
             {
                 Form1 fm = new Form1();
                 this.Hide();

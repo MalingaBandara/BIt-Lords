@@ -25,26 +25,34 @@ namespace project
 
         private void button2_Click(object sender, EventArgs e)
         {
-            int bar = int.Parse(txtBCode.Text);
-            string Pname = txtPname.Text;
-            string descriptikon = txtDes.Text;
-            string category = txtcate.Text;
-            float OPrice = float.Parse(txtOP.Text);
-            float MPrice = float.Parse(txtMP.Text);
 
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\posDB.mdf;Integrated Security=True;Connect Timeout=30");
-            string update = "UPDATE Product SET Barcode='"+bar+"',Description='"+ descriptikon + "',Category='"+category+"',OriginalPrice='"+OPrice+"',MarkupPrice='"+MPrice+ "' WHERE ProductName='"+Pname+"' ";
-            SqlCommand cmd = new SqlCommand(update, con);
-
-            try
+            if (txtBCode.Text == "" || txtPname.Text == "" || txtDes.Text == "" || txtPname.Text == "" || txtcate.Text == "" || txtOP.Text == "" || txtMP.Text == "")
             {
-                con.Open();
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Product is Register");
+                MessageBox.Show("enter required feild");
             }
-            catch (SqlException ex)
+            else
             {
-                MessageBox.Show("" + ex);
+                int bar = int.Parse(txtBCode.Text);
+                string Pname = txtPname.Text;
+                string descriptikon = txtDes.Text;
+                string category = txtcate.Text;
+                float OPrice = float.Parse(txtOP.Text);
+                float MPrice = float.Parse(txtMP.Text);
+
+                SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\posDB.mdf;Integrated Security=True;Connect Timeout=30");
+                string update = "UPDATE Product SET Barcode='" + bar + "',Description='" + descriptikon + "',Category='" + category + "',OriginalPrice='" + OPrice + "',MarkupPrice='" + MPrice + "' WHERE ProductName='" + Pname + "' ";
+                SqlCommand cmd = new SqlCommand(update, con);
+
+                try
+                {
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Product is Register");
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show("" + ex);
+                }
             }
         }
 
