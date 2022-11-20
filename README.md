@@ -1,4 +1,4 @@
 # BIt-Lords
 
-Inventory Management system uing C#
+Inventory Management system using C#
 # CRUD
